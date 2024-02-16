@@ -1,0 +1,7 @@
+---
+- name: "Certbot playbook for install and renew certificates"
+  become: true
+  gather_facts: false
+  hosts: all
+  roles:
+    - "certbot"

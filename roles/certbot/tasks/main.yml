@@ -1,0 +1,18 @@
+---
+- name: "Install cerbot package via snap"
+  ansible.builtin.apt:
+    name: "certbot"
+    update_cache: true
+
+- name: "Get Certificate of {{ domain_name }}"
+  ansible.builtin.shell:
+    cmd: |
+      certbot certonly \
+      --manual \
+      --preferred-challenges dns-01 \
+      --no-eff-email \
+      --manual-public-ip-logging-ok \
+      --email {{ certbot_mail }} \
+      --agree-tos \
+      --domain {{ domain_name }}
+  changed_when: false

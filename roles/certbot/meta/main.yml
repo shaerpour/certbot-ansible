@@ -1,0 +1,15 @@
+galaxy_info:
+  author: "Amirhossein Shaerpour"
+  description: Install, Configure and Renew letsencrypt certificates
+  company: Myket
+  license: license (MIT, BSD)
+  min_ansible_version: 2.10
+  platforms:
+    - name: Ubuntu
+      versions:
+        - "all"
+  galaxy_tags:
+    - "certbot"
+    - "letsencrypt"
+    - "ssl"
+    - "certificates"
